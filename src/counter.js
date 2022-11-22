@@ -1,3 +1,5 @@
+import './Counter.css';
+
 import { useState } from "react";
 
 function Counter() {
@@ -20,7 +22,7 @@ function Counter() {
     }
   return (
     <div>
-        <h1>Counter</h1>
+        <h1 class="header">Counter</h1>
         <p>Counter is at {count}</p>
         <button onClick={incr}>Click to add 1 to counter</button>
         <p><button onClick={reset}>Click to reset counter</button></p>
