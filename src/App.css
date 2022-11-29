@@ -3,6 +3,23 @@
   font-style: italic;
 }
 
+.Delta, .Max {
+    color: #0c48ca;
+    width: 300px;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-style:inset;
+    border-radius: 10px;
+    border-color: #282c34;
+    background-color: rgb(170, 239, 239);
+}
+
+input{
+  color: #0c48ca;
+  margin: auto;
+  width: 30px;
+}
 /* .App{
   color: #ac0ee6;
   width: 500px;

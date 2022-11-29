@@ -19,8 +19,10 @@ function App() {
 
   return (
     <div className="App">
-      <p>Delta Number <input type= "number" value = {delta} onChange = {handleDelta}/></p>
-      <p>Max Number <input type= "number" value = {MaxNum} onChange={changeMax}/></p>
+      <p className='Max'>Max Number <br/>
+      <input type= "number" value = {MaxNum} onChange={changeMax}/></p><br/>
+      <p className='Delta'>Delta Number <br/>
+      <input type= "number" value = {delta} onChange = {handleDelta}/></p> <br/>
       <Counter MaxNum = {MaxNum} delta={delta} />
       <Counter delta={delta} MaxNum = {MaxNum}/>
     </div>
