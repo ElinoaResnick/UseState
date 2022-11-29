@@ -4,15 +4,33 @@ import { useState } from "react";
 
 function Counter(props) {
     const {delta} = props
+    const {MaxNum} = props
     const[count, setCount] = useState(1)
 
+    // function incr(){
+    //     setCount(
+    //         function(oldCount){
+    //             return oldCount +delta
+    //         }
+    //     )
+    //     console.log(count)
+    // }
     function incr(){
-        setCount(
-            function(oldCount){
-                return oldCount +delta
-            }
+        if (count+delta < MaxNum) {
+            setCount(
+                function(oldCount){
+                    return oldCount +delta
+                }
+            )
+
+        }
+        else if (
+            reset()
         )
         console.log(count)
+        console.log(delta)
+        console.log(MaxNum)
+        console.log(props)
     }
 
     function reset(){
