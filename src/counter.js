@@ -1,20 +1,19 @@
 import './Counter.css';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Counter(props) {
-    const {delta} = props
-    const {MaxNum} = props
+    const {delta, MaxNum, getReset, needToReset} = props
     const[count, setCount] = useState(0)
+    useEffect(()=>{
+        if(needToReset){
+            setCount(0)
+            getReset(false)
+        }
+    },[needToReset, getReset])
 
-    // function incr(){
-    //     setCount(
-    //         function(oldCount){
-    //             return oldCount +delta
-    //         }
-    //     )
-    //     console.log(count)
-    // }
+    // const {MaxNum} = props
+
     function incr(){
         if (count+delta < MaxNum) {
             setCount(
@@ -25,20 +24,17 @@ function Counter(props) {
 
         }
         else if (
-            reset()
+            setCount(0)
         )
-        console.log(count)
-        console.log(delta)
-        console.log(MaxNum)
+        // console.log(count)
+        // console.log(delta)
+        // console.log(MaxNum)
         console.log(props)
     }
 
     function reset(){
-        setCount(0
-            // function(oldCount){
-            //     return oldCount =1
-            // }
-        )
+        getReset(true)
+        // setCount(0)
     }
   return (
     <div>
